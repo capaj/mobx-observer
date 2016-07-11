@@ -1,0 +1,54 @@
+{
+  "name": "mobx-observer",
+  "version": "0.1.0",
+  "description": "a simple observer decorator you can utilize with any react-like components",
+  "main": "dist/observer.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "standard && ava",
+    "precommit": "npm test && npm run build",
+    "build": "babel observer.js --out-file dist/observer.js --source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capaj/mobx-observer.git"
+  },
+  "keywords": [
+    "mobx",
+    "react",
+    "inferno",
+    "TFRP"
+  ],
+  "author": "capajj@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/capaj/mobx-observer/issues"
+  },
+  "homepage": "https://github.com/capaj/mobx-observer#readme",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "babel-cli": "^6.10.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "husky": "^0.11.4",
+    "inferno": "^0.7.17",
+    "inferno-component": "^0.7.17",
+    "mobx": "^2.3.5",
+    "standard": "^7.1.2"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "standard": {
+    "ignore": [
+      "test/*.js",
+      "dist/*"
+    ]
+  }
+}
