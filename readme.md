@@ -37,7 +37,7 @@ class Counter extends Component {
 // stateless component style
 import {makeObserver, setComponent} from './observer'
 import Component from 'inferno-component'
-setComponent(Component) // you only want to do this once, not for every component
+setComponent(Component) // you only need to do this once, not for every component
 
 const Counter = makeObserver((props) => {
   return (
