@@ -45,7 +45,7 @@ class Counter extends Component {
 import Component from 'inferno-component'
 import {makeObserver, setComponent} from './observer'
 setComponent(Component) // you only need to do this once, not for every component
-
+// if you forget to setComponent, you will get this error: Super expression must either be null or a function, not undefined
 const Counter = makeObserver((props) => {
   return (
       <div onClick={() => {
