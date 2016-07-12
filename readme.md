@@ -1,6 +1,6 @@
 # mobx-observer
 
-an observer decorator for all your react-like components.
+an observer decorator and factory for all your react-like components.
 
 ## Required methods
 
