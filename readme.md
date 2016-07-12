@@ -18,8 +18,11 @@ npm i mobx-observer -S
 ```
 
 ## Usage
+
+### decorator
 ```javascript
-import observer from 'mobx-observer'
+import Component from 'inferno-component'
+import {observer} from 'mobx-observer'
 
 @observer
 class Counter extends Component {
@@ -33,10 +36,12 @@ class Counter extends Component {
     )
   }
 }
+```
 
-// stateless component style
-import {makeObserver, setComponent} from './observer'
+### stateless component style
+```javascript
 import Component from 'inferno-component'
+import {makeObserver, setComponent} from './observer'
 setComponent(Component) // you only need to do this once, not for every component
 
 const Counter = makeObserver((props) => {
@@ -50,3 +55,7 @@ const Counter = makeObserver((props) => {
     )
 })
 ```
+
+## Performance
+
+Mobx-observer should be on par with mobx-react.
