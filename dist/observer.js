@@ -34,7 +34,7 @@ function observer(componentClass) {
           _this.render();
           _this.forceUpdate();
         });
-        originalDidMount();
+        originalDidMount.call(this);
       };
     })();
   } else {
@@ -52,7 +52,7 @@ function observer(componentClass) {
       var originalUnmount = componentClass.prototype.componentWillUnmount;
       componentClass.prototype.componentWillUnmount = function () {
         this.disposer();
-        originalUnmount();
+        originalUnmount.call(this);
       };
     })();
   } else {

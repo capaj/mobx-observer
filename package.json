@@ -1,6 +1,6 @@
 {
   "name": "mobx-observer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a simple observer decorator you can utilize with any react-like components",
   "main": "dist/observer.js",
   "directories": {

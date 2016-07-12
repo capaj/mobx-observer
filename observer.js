@@ -12,7 +12,7 @@ export function observer (componentClass) {
         this.render()
         this.forceUpdate()
       })
-      originalDidMount()
+      originalDidMount.call(this)
     }
   } else {
     componentClass.prototype.componentDidMount = function () {
@@ -26,7 +26,7 @@ export function observer (componentClass) {
     const originalUnmount = componentClass.prototype.componentWillUnmount
     componentClass.prototype.componentWillUnmount = function () {
       this.disposer()
-      originalUnmount()
+      originalUnmount.call(this)
     }
   } else {
     componentClass.prototype.componentWillUnmount = function () {
